@@ -1,0 +1,11 @@
+const renderer = new Renderer()
+const api = new APIManager(renderer)
+api.generateNewPage()
+$(`#gen-page`).click(function(){
+    $(`.user-container`).empty()
+    $(`#friendUsers`).remove()
+    $(`.quote-container`).empty()
+    $(`.pokemon-container`).empty()
+    $(`.meat-container`).empty()
+    api.generateNewPage()
+})
